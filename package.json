@@ -2,7 +2,7 @@
   "publisher": "yuyanpo",
   "name": "vscode-theme-sdx",
   "displayName": "SDX Theme",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageManager": "pnpm@8.11.0",
   "description": "SDX theme for VS Code",
   "license": "MIT",
