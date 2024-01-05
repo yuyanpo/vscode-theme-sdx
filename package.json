@@ -1,0 +1,73 @@
+{
+  "publisher": "yuyanpo",
+  "name": "vscode-theme-sdx",
+  "displayName": "SDX Theme",
+  "version": "0.0.1",
+  "packageManager": "pnpm@8.11.0",
+  "description": "SDX theme for VS Code",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuyanpo/vscode-theme-sdx"
+  },
+  "bugs": {
+    "url": "https://github.com/yuyanpo/vscode-theme-sdx/issues"
+  },
+  "keywords": [
+    "theme",
+    "sdx",
+    "light",
+    "dark"
+  ],
+  "categories": [
+    "Themes"
+  ],
+  "exports": {
+    "./*": "./*"
+  },
+  "icon": "icon.png",
+  "files": [
+    "themes"
+  ],
+  "engines": {
+    "vscode": "^1.43.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "SDX Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/sdx-dark.json"
+      },
+      {
+        "label": "SDX Light",
+        "uiTheme": "vs",
+        "path": "./themes/sdx-light.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "esno scripts/index.ts",
+    "dev": "esno watch scripts/index.ts",
+    "vscode:prepublish": "npm run build",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build",
+    "release": "bumpp --all && vsce publish --no-dependencies"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.1.0",
+    "@antfu/utils": "^0.7.6",
+    "@types/color": "^3.0.6",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.10.0",
+    "@vscode/vsce": "^2.22.0",
+    "bumpp": "^9.2.0",
+    "color": "^4.2.3",
+    "eslint": "^8.54.0",
+    "esno": "^4.0.0",
+    "fs-extra": "^11.1.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.2"
+  },
+  "preview": true
+}
